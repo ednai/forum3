@@ -1,4 +1,4 @@
-<?=anchor('questao-novo','Nova questao')?>
+<?=anchor('questao-novo','Nova Questão',array('class' => 'btn btn-secondary'))?>
 <?php if ($questoes == FALSE): ?>
     <h3>Nenhuma questão encontrada</h3>
 <?php else: ?>
@@ -8,8 +8,8 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Título</th>
-                    <th scope="col">...</th>
-                    <th scope="col">...</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>

@@ -1,11 +1,12 @@
 <?=form_open('questao-salvar')?>
-    <table>
-        <tr>
-            <td>Título</td>
-            <td><input type="text" name="questao"/></td>
-        </tr>
-        
-    </table>
-    <input type="submit" value="Salvar"/>
+
+<div class="form-row">
+
+	<label for="exampleFormControlTextarea1">Título</label>
+    <textarea class="form-control col-sm-2" rows="5" name="questao"></textarea>
+ </div>
+
+<input class="btn btn-secondary" type="submit" value="Salvar"/>
+<?=anchor('questao','Voltar',array('class' => 'btn btn-secondary'))?>
+
 <?=form_close()?>
-<?=anchor('questao','Voltar')?>

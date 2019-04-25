@@ -7,11 +7,15 @@
     </head>
     <body>
         <?php if ($this->session->flashdata('error') == TRUE): ?>
-            <h2><?=$this->session->flashdata('error')?></h2>
+            <div class="alert alert-danger" role="alert">
+                <?=$this->session->flashdata('error')?>
+            </div>
         <?php endif; ?>
         
         <?php if ($this->session->flashdata('success') == TRUE): ?>
-            <h2><?=$this->session->flashdata('success')?></h2>
+            <div class="alert alert-success" role="alert">
+                <?=$this->session->flashdata('success')?>
+            </div>
         <?php endif; ?>
         
-        <h1><?=$titulo?></h1>
+        <h1 class="display-1"><?=$titulo?></h1>

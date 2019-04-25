@@ -3,7 +3,7 @@
         
         public function index(){
             $parametros['questoes'] =  $this->Questao->get();
-            $parametros['titulo'] = "Lista";
+            $parametros['titulo'] = "Questões";
             $this->load->view('cabecalho',$parametros);
             $this->load->view('questao/index');
             $this->load->view('rodape');
@@ -11,7 +11,7 @@
 
         public function novo(){
             $parametros['questoes'] = 'Nova Postagem';
-            $parametros['titulo'] ='cadastrar nova questao';
+            $parametros['titulo'] ='Nova Questão';
             $this->load->view('cabecalho',$parametros);
             $this->load->view('questao/novo');
             $this->load->view('rodape');
