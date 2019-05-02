@@ -7,6 +7,6 @@
  </div>
 
 <input class="btn btn-secondary" type="submit" value="Salvar"/>
-<?=anchor('questao','Voltar',array('class' => 'btn btn-secondary'))?>
+<?=anchor('questao-index','Voltar', array('class' => 'btn btn-secondary'))?>
 
 <?=form_close()?>
