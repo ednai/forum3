@@ -9,4 +9,5 @@
     </table>
     <input type="submit" value="Atualizar"/>
 <?=form_close()?>
-<?=anchor('questao','Voltar')?>
+<?=anchor('questao-index','Voltar', array('class' => 'btn btn-secondary'))?>
+
