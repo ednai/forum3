@@ -1,5 +1,5 @@
 <?php
-    class Questao extends CI_Model {
+    class QuestaoModel extends CI_Model {
         
         function get($id=null) {
             if($id){

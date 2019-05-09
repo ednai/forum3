@@ -2,7 +2,7 @@
     class QuestaoController extends CI_Controller {
         
         public function index(){
-            $parametros['questoes'] =  $this->Questao->get();
+            $parametros['questoes'] =  $this->QuestaoModel->get();
             $parametros['titulo'] = "Questões";
             $this->load->view('cabecalho',$parametros);
             $this->load->view('questao/index');
@@ -18,14 +18,14 @@
         }
          public function salvar(){
             $questao = $this->input->post();
-            $this->Questao->inserir($questao);
+            $this->QuestaoModel->inserir($questao);
             $this->session->set_flashdata('success', 'Questao cadastrada com sucesso!');
             redirect();
         }
 
         public function editar($Id){
             $parametros['titulo'] = 'Edição de Postagem';
-            $parametros['questao'] =  $this->Questao->get($Id);
+            $parametros['questao'] =  $this->QuestaoModel->get($Id);
 
             if(!$parametros['questao']){
                 $this->session->set_flashdata('error', 'questao nao encontrada!');
@@ -39,12 +39,12 @@
         public function atualizar(){
             $questao= $this->input->post();
             var_dump($questao);
-            $this->Questao->atualizar($questao);
+            $this->QuestaoModel->atualizar($questao);
             $this->session->set_flashdata('success', 'Questao atualizada com sucesso!');
             redirect();
         }
          public function excluir($Id){
-            $this->Questao->deletar($Id);
+            $this->QuestaoModel->deletar($Id);
             $this->session->set_flashdata('success', 'Questao excluída com sucesso!');
             redirect();
         }

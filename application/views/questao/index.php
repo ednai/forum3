@@ -10,13 +10,15 @@
                     <th scope="col">Título</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($questoes as $questao): ?>
                     <tr>
                         <td><?=$questao['questao']?></td>
-                    <td><?=anchor('questao-editar/'.$questao['Id'],'Editar','class="btn btn-secondary btn-block"')?></td>
+                        <td><?=anchor('comentario-index/'.$questao['Id'],'Comentários','class="btn btn-primary btn-block"')?></td>
+                        <td><?=anchor('questao-editar/'.$questao['Id'],'Editar','class="btn btn-secondary btn-block"')?></td>
                         <td><?=anchor('questao-excluir/'.$questao['Id'],'Excluir','class="btn btn-danger"')?></td>
                     </tr>
 

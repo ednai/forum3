@@ -59,3 +59,10 @@ $route['questao-salvar'] = "QuestaoController/salvar";
 $route['questao-editar/(:num)'] = "QuestaoController/editar/$1";
 $route['questao-atualizar'] = "QuestaoController/atualizar";
 $route['questao-excluir/(:num)'] = "QuestaoController/excluir/$1";
+
+$route['comentario-index/(:num)'] = "ComentarioController/index/$1";
+$route['comentario-novo'] = "ComentarioController/novo";
+$route['comentario-salvar'] = "ComentarioController/salvar";
+$route['comentario-editar/(:num)'] = "ComentarioController/editar/$1";
+$route['comentario-atualizar'] = "ComentarioController/atualizar";
+$route['comentario-excluir/(:num)'] = "ComentarioController/excluir/$1";
