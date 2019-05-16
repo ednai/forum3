@@ -4,23 +4,25 @@
         public function index($id_questao){
             $parametros['comentarios'] =  $this->ComentarioModel->get($id_questao);
             $parametros['titulo'] = "Comentarios";
+            $parametros['id_questao'] = $id_questao;
             $this->load->view('cabecalho',$parametros);
             $this->load->view('comentario/index');
             $this->load->view('rodape');
         }
 
-        public function novo(){
-            $parametros['comentario'] = 'Novo Comentario';
-            $parametros['titulo'] ='Novo Comentario';
+        public function novo($id_questao){
+            $parametros['titulo'] ='Novo Comentário';
+            $parametros['id_questao'] = $id_questao;
             $this->load->view('cabecalho',$parametros);
-            $this->load->view('comentario/novo');
+            $this->load->view('comentario/novo',$parametros);
             $this->load->view('rodape');
         }
          public function salvar(){
             $comentario = $this->input->post();
-            $this->Comentario->inserir($comentario);
+            $this->ComentarioModel->inserir($comentario);
             $this->session->set_flashdata('success', 'Comentario cadastrado com sucesso!');
-            redirect();
+            
+            redirect("comentario-index/".$comentario["id_questao"]);
         }
 
         public function editar($Id){

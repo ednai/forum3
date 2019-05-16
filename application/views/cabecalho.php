@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Forum2</title>
+        <title>Forum3</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
     </head>

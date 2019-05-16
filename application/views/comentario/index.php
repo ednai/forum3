@@ -1,4 +1,4 @@
-<?=anchor('comentario-novo','Novo Comentario',array('class' => 'btn btn-secondary'))?>
+<?=anchor('comentario-novo/'.$id_questao,'Novo Comentario',array('class' => 'btn btn-secondary'))?>
 
 <?php if ($comentarios == FALSE): ?>
     <h3>Nenhum mentario encontrado</h3>
