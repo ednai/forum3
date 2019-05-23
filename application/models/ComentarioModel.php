@@ -10,7 +10,7 @@
                 $this->db->where('id_questao',$id_questao);
                 $query = $this->db->get('tb_comentario');
                 return $query->result_array();
-            }
+            }  
         }
         
         function inserir($tb_comentario) {
@@ -18,7 +18,7 @@
         }
 
         function atualizar($tb_comentario) {
-            $this->db->where('Id', $tb_questao['Id']);
+            $this->db->where('Id', $tb_comentario['Id']);
             return $this->db->update('tb_comentario', $tb_comentario);
         }
 

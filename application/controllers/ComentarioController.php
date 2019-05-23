@@ -25,14 +25,15 @@
             redirect("comentario-index/".$comentario["id_questao"]);
         }
 
-        public function editar($Id){
+        public function editar($id_questao,$id){
             $parametros['titulo'] = 'Edição de Comentario';
-            $parametros['comentario'] =  $this->Comentario->get($Id);
+            $parametros['comentario'] =  $this->ComentarioModel->get($id_questao,$id);
 
             if(!$parametros['comentario']){
                 $this->session->set_flashdata('error', 'comentario nao encontrado!');
-                redirect('comentario-index');
+                redirect('comentario-index/'.$id_questao);
             }
+
             $this->load->view('cabecalho',$parametros);
             $this->load->view('comentario/edicao',$parametros);
             $this->load->view('rodape');
@@ -40,13 +41,12 @@
 
         public function atualizar(){
             $comentario= $this->input->post();
-            var_dump($comentario);
-            $this->Comentario->atualizar($comentario);
+            $this->ComentarioModel->atualizar($comentario);
             $this->session->set_flashdata('success', 'Comentario atualizado com sucesso!');
-            redirect();
+            redirect("comentario-index/".$comentario["id_questao"]);
         }
          public function excluir($Id){
-            $this->Comentario->deletar($Id);
+            $this->ComentarioModel->deletar($Id);
             $this->session->set_flashdata('success', 'Comentario excluído com sucesso!');
             redirect();
         }

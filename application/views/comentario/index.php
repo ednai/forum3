@@ -17,7 +17,7 @@
                 <?php foreach ($comentarios as $comentario): ?>
                     <tr>
                         <td><?=$comentario['comentario']?></td>
-                    <td><?=anchor('comentario-editar/'.$comentario['Id'],'Editar','class="btn btn-secondary btn-block"')?></td>
+                    <td><?=anchor('comentario-editar/'.$id_questao.'/'.$comentario['Id'],'Editar','class="btn btn-secondary btn-block"')?></td>
                         <td><?=anchor('comentario-excluir/'.$comentario['Id'],'Excluir','class="btn btn-danger"')?></td>
                     </tr>
 
