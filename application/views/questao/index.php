@@ -26,7 +26,10 @@
             </tbody>
         </table>
     </div>
+<<<<<<< HEAD
 
     <?=anchor('usuario-novo/','Login','class="btn btn-secondary"')?>
      <?=anchor('usuario-index/','Listar Usuarios','class="btn btn-secondary"')?>
+=======
+>>>>>>> 9ba18adf94e783cb2f7ef62da27acad45f1c6710
 <?php endif; ?>

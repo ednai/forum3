@@ -133,4 +133,8 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
+<<<<<<< HEAD
 $autoload['model'] = array('QuestaoModel','ComentarioModel', 'Usuario_m');
+=======
+$autoload['model'] = array('QuestaoModel','ComentarioModel');
+>>>>>>> 9ba18adf94e783cb2f7ef62da27acad45f1c6710

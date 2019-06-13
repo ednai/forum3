@@ -65,6 +65,7 @@ $route['comentario-novo/(:num)'] = "ComentarioController/novo/$1";
 $route['comentario-salvar'] = "ComentarioController/salvar";
 $route['comentario-editar/(:num)/(:num)'] = "ComentarioController/editar/$1/$2";
 $route['comentario-atualizar'] = "ComentarioController/atualizar";
+<<<<<<< HEAD
 $route['comentario-excluir/(:num)'] = "ComentarioController/excluir/$1";
 
 
@@ -75,3 +76,6 @@ $route['usuario-salvar'] = "UsuarioController/salvar";
 $route['usuario-editar/(:num)'] = "UsuarioController/editar/$1";
 $route['usuario-atualizar'] = "UsuarioController/atualizar";
 $route['usuario-excluir/(:num)'] = "UsuarioController/excluir/$1";
+=======
+$route['comentario-excluir/(:num)'] = "ComentarioController/excluir/$1";
+>>>>>>> 9ba18adf94e783cb2f7ef62da27acad45f1c6710
