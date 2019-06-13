@@ -73,4 +73,5 @@ $route['usuario-salvar'] = "UsuarioController/salvar";
 $route['usuario-editar/(:num)'] = "UsuarioController/editar/$1";
 $route['usuario-atualizar'] = "UsuarioController/atualizar";
 $route['usuario-excluir/(:num)'] = "UsuarioController/excluir/$1";
-$route['comentario-excluir/(:num)'] = "ComentarioController/excluir/$1";
+$route['usuario-login'] = "UsuarioController/login";
+$route['usuario-validar'] = "UsuarioController/validar";

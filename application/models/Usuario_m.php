@@ -25,5 +25,18 @@
             $this->db->where('Id', $Id);
             return $this->db->delete('tb_login');
         }
+
+        function isValido($usuario) {
+            $this->db->where('usuario', $usuario->usuario);
+            $this->db->where('senha', $usuario->senha);
+            
+            $query = $this->db->get('tb_login');
+            
+            if ($query->num_rows() == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
  }
     

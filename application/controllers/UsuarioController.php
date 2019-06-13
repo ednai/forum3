@@ -52,4 +52,21 @@
             $this->session->set_flashdata('success', 'Usuario excluído com sucesso!');
             redirect();
         }
+
+        public function login(){
+            $parametros['titulo'] ='Login Usuário';
+            $this->load->view('cabecalho',$parametros);
+            $this->load->view('usuario/login');
+            $this->load->view('rodape');
+        }
+
+        public function validar(){
+            $usuario = $this->input->post();
+
+            if ($this->Usuario_m->isValido($usuario)) {
+                 $this->session->set_flashdata('usuario-session', $usuario);
+            }
+
+            redirect('questao-index');
+        }
     }

@@ -26,10 +26,9 @@
             </tbody>
         </table>
     </div>
-<<<<<<< HEAD
 
-    <?=anchor('usuario-novo/','Login','class="btn btn-secondary"')?>
-     <?=anchor('usuario-index/','Listar Usuarios','class="btn btn-secondary"')?>
-=======
->>>>>>> 9ba18adf94e783cb2f7ef62da27acad45f1c6710
+    <?=anchor('usuario-login/','Login','class="btn btn-secondary"')?>
+    <?=anchor('usuario-novo/','Cadastre-se','class="btn btn-secondary"')?>
 <?php endif; ?>
+
+<?=$this->session->userdata('usuario-session');?>
